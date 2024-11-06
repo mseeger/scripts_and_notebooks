@@ -25,3 +25,6 @@ For an installation with all dependencies, replace the last command by:
 ```bash
 pip install -e '.[all]'
 ```
+
+Do not forget to active the venv `scripts_venv` before running any of the scripts
+or notebooks.

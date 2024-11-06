@@ -8,3 +8,4 @@ geoplot
 pillow
 psycopg[binary,pool]
 prompt-toolkit
+ghapi
