@@ -20,6 +20,13 @@ For a minimal installation, replace the last command by:
 pip install -e '.'
 ```
 
+For development of new scripts, utility code, or notebooks, replace the last
+command by:
+
+```bash
+pip install -e '.[datasci,dev]'
+```
+
 For an installation with all dependencies, replace the last command by:
 
 ```bash

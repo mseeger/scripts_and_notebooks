@@ -11,10 +11,11 @@ long_description = (Path(__file__).parent / "README.md").read_text()
 required_core = load_requirements("requirements.txt")
 required_datasci = load_requirements("requirements-datasci.txt")
 required_aws = load_requirements("requirements-aws.txt")
+required_dev = load_requirements("requirements-dev.txt")
 
 # Do not add SMAC for now in "extra" as it can easily conflict with Yahpo config-space version
 # Do not add benchmarks either as it contains lots of dependencies can cause conflicts
-required_all = required_datasci + required_aws
+required_all = required_datasci + required_aws + required_dev
 
 setup(
     name="scripts_and_notebooks",
