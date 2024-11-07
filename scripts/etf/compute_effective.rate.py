@@ -76,4 +76,4 @@ log1prho = sopt.brentq(
     f=lambda x: critfunc(x, data, port_value),
     a=a, b=b)
 
-print 'Effective rate: rho = %f\n' % (np.expm1(log1prho),)
+print('Effective rate: rho = %f\n' % (np.expm1(log1prho),))

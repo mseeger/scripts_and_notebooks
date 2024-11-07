@@ -1,6 +1,5 @@
 from pathlib import Path
 from collections import Counter
-from typing import Optional, List
 from dataclasses import dataclass
 import time
 import shutil
@@ -20,7 +19,7 @@ VIDEO_DIR_PREFIX = "videos"
 VIDEO_SUFFIXES = [".MOV", ".MP4", ".mp4"]
 
 
-def get_directory_prefix(path: Path) -> Optional[str]:
+def get_directory_prefix(path: Path) -> str | None:
     suffix = path.suffix
     if suffix in PIC_SUFFIXES:
         return PIC_DIR_PREFIX
@@ -66,7 +65,7 @@ class MonthAndYear:
         return self.pics_root_path / str(self.year) / subdir
 
 
-def live_mode_video_path(path: Path) -> Optional[Path]:
+def live_mode_video_path(path: Path) -> Path | None:
     """
     In IPhone live mode, for every picture ``XYZ.HEIC``, there is also a short
     video ``XYZ.MOV``.
@@ -80,7 +79,7 @@ def live_mode_video_path(path: Path) -> Optional[Path]:
         return None
 
 
-def filter_live_mode_videos(paths: List[Path]) -> List[Path]:
+def filter_live_mode_videos(paths: list[Path]) -> list[Path]:
     """
     Remove all live mode video file paths from ``paths``.
 
@@ -133,7 +132,7 @@ def main(
         print(f"{key:{maxlen}}: {num_copied}" + postfix)
 
 
-def path_or_default(path_str: Optional[str], def_path: Path) -> Path:
+def path_or_default(path_str: str | None, def_path: Path) -> Path:
     return def_path if path_str is None else Path(path_str)
 
 
