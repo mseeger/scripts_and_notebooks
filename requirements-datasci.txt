@@ -1,8 +1,11 @@
 beautifulsoup4
 notebook
 SQLAlchemy
+mysqlclient
 geopy
 pillow
 psycopg
 prompt-toolkit
 ghapi
+python-dotenv
+anthropic
