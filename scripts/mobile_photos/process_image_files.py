@@ -61,7 +61,7 @@ class MonthAndYear:
         )
 
     def path_prefix(self) -> Path:
-        subdir = self.directory_prefix + f"-{self.month:02d}{self.year % 100:02d}"
+        subdir = self.directory_prefix + f"_{self.month:02d}{self.year % 100:02d}"
         return self.pics_root_path / str(self.year) / subdir
 
 

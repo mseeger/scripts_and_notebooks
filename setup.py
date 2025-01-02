@@ -31,6 +31,7 @@ setup(
     extras_require={
         "datasci": required_datasci,
         "aws": required_aws,
+        "dev": required_dev,
         "all": required_all,
     },
     install_requires=required_core,
